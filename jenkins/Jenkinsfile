@@ -46,10 +46,10 @@ pipeline {
                 }
             }
         }
-        stage('Docker') { 
+        stage('Docker_build') { 
             steps {
                 container('docker') {
-                    sh 'docker ps';
+                    sh 'docker build -t oandronic_java:1.0 .';
                 }
             }
         }
