@@ -50,6 +50,7 @@ pipeline {
             steps {
                 container('docker') {
                     sh "docker build -t oandronic_java:${env.BUILD_NUMBER} .";
+                    sh "docker images";
                 }
             }
         }
